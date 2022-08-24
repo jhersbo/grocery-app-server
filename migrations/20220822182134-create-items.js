@@ -2,14 +2,14 @@
 module.exports = {
   async up(queryInterface, Sequelize) {
     await queryInterface.createTable('items', {
-      item_id:{
+      arr_id:{
         type: Sequelize.INTEGER,
         allowNull: false,
         primaryKey: true,
         autoIncrement: true
       },
-      item: {
-        type: Sequelize.STRING,
+      item_arr: {
+        type: Sequelize.ARRAY(Sequelize.STRING),
         allowNull: false
       }
     });

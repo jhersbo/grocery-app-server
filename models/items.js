@@ -9,19 +9,23 @@ module.exports = (sequelize, DataTypes) => {
      * This method is not a part of Sequelize lifecycle.
      * The `models/index` file will call this method automatically.
      */
-    static associate(models) {
-      // define association here
+    static associate({ users }) {
+      this.belongsTo(users, {
+        foreignKey: 'users',
+        as: 'user_id'
+      })
     }
   }
   items.init({
-    item_id:{
+    arr_id:{
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true
     },
-    item: {
-      type: DataTypes.STRING,
+    //user id fk here
+    item_arr: {
+      type: DataTypes.ARRAY(DataTypes.STRING),
       allowNull: false
     }
   }, {
