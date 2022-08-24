@@ -1,32 +1,33 @@
 {
-  "development": {
-    "username": "nrnurnlvqvpckj",
-    "password": "26826a17d44cda4984af761e0d938a2b2c2b5be9f3b1b15dad976fd146911b77",
-    "database": "da8ndeluj910n2",
-    "host": "ec2-44-195-100-240.compute-1.amazonaws.com",
-    "dialect": "postgres",
-    "dialectOptions": {
-      "ssl": {
-        "require": true, 
-        "rejectUnauthorized": false
+    "development": {
+      "username": "nrnurnlvqvpckj",
+      "password": "26826a17d44cda4984af761e0d938a2b2c2b5be9f3b1b15dad976fd146911b77",
+      "database": "da8ndeluj910n2",
+      "host": "ec2-44-195-100-240.compute-1.amazonaws.com",
+      "dialect": "postgres",
+      "dialectOptions": {
+        "ssl": {
+          "require": true, 
+          "rejectUnauthorized": false
+          }
+        }
+    },
+    "test": {
+      "username": "root",
+      "password": null,
+      "database": "database_test",
+      "host": "127.0.0.1",
+      "dialect": "mysql"
+    },
+    "production": {
+      "use_env_variable": "DATABASE_URL",
+      "dialect": "postgres",
+      "dialectOptions": {
+          "ssl": {
+            "require": true,
+            "rejectUnauthorized": false
         }
       }
-  },
-  "test": {
-    "username": "root",
-    "password": null,
-    "database": "database_test",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
-  },
-  "production": {
-    "use_env_variable": "DATABASE_URL",
-    "dialect": "postgres",
-    "dialectOptions": {
-        "ssl": {
-          "require": true,
-          "rejectUnauthorized": false
-      }
     }
-  }
-} 
+}
+ 
