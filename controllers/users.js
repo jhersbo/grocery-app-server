@@ -3,4 +3,4 @@ const db = require('../models')
 const { Op } = require('sequelize')
 const { users, items } = db
 
-export default router
+module.exports = router

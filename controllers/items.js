@@ -8,5 +8,4 @@ const { items, users } = db
 
 
 
-
-export default router
+module.exports = router
