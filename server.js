@@ -18,6 +18,10 @@ app.use(cookieSession({
 //     credentials: true,
 // }))
 
+//controllers
+app.use('/users', require('./controllers/users'))
+app.use('/items', require('./controllers/items'))
+
 app.get('/', async (req, res)=>{
     try{
         res.send('Home')
