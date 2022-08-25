@@ -3,23 +3,31 @@ const db = require('../models')
 const { Op } = require('sequelize')
 const { items, users } = db
 
-// get users list from their id
-router.get('/', async (req, res)=>{
+
+//get all items stored for client filtering
+router.get('/', async(req, res)=>{
     try{
-        const foundList = await items.findOne({
+        const foundList = await items.findAll()
+        res.status(200).json(foundList)
+    }catch(err){
+        res.status(500).json(err)
+    }
+})
+
+router.get('/:user_id', async(req, res)=>{
+    try{
+        const foundList = await items.findAll({
             where:{
-                user_id: req.body.user_id
+                user_id: req.params.user_id
             }
         })
         res.status(200).json(foundList)
     }catch(err){
         res.status(500).json(err)
-        console.log(err)
     }
 })
 
-//modify user's list [modification of the array will take place in the client. This functions merely to replace the array stored in the db.]
-
+//modify user's list 
 router.post('/', async (req, res)=>{
     try{
         items.create(req.body)
