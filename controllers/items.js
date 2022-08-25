@@ -27,7 +27,7 @@ router.get('/:user_id', async(req, res)=>{
     }
 })
 
-//modify user's list 
+//create items 
 router.post('/', async (req, res)=>{
     try{
         items.create(req.body)
