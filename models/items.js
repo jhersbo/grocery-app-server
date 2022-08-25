@@ -14,23 +14,17 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: 'user_id',
         as: 'user'
       })
-
-      this.hasOne(users, {
-        foreignKey: 'arr_id',
-        as: "items"
-      }) 
     }
   }
   items.init({
-    arr_id:{
+    item_id:{
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true
     },
-    //user id fk here
-    item_arr: {
-      type: DataTypes.ARRAY(DataTypes.STRING),
+    item: {
+      type: DataTypes.STRING,
       allowNull: false
     }
   }, {

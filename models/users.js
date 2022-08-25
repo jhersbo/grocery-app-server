@@ -14,11 +14,6 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: 'user_id',
         as: 'user'
       })
-
-      this.belongsTo(items, {
-        foreignKey: 'arr_id',
-        as: 'items'
-      })
     }
   }
   users.init({
