@@ -11,6 +11,9 @@ module.exports = {
       item: {
         type: Sequelize.ARRAY(Sequelize.STRING),
         allowNull: false
+      },
+      notes:{
+        type: Sequelize.STRING
       }
     });
   },

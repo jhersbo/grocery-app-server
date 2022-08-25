@@ -26,6 +26,9 @@ module.exports = (sequelize, DataTypes) => {
     item: {
       type: DataTypes.STRING,
       allowNull: false
+    },
+    notes:{
+      type: DataTypes.STRING
     }
   }, {
     sequelize,
