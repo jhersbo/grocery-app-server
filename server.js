@@ -13,10 +13,10 @@ app.use(cookieSession({
     keys: [ "asjhdjwbriueghfngn" ],
     maxAge: 24 * 60 * 60 * 1000
 }))
-// app.use(cors({
-//     origin: "http://localhost:3001",
-//     credentials: true,
-// }))
+app.use(cors({
+    origin: "http://localhost:3001",
+    credentials: true,
+}))
 
 //controllers
 app.use('/users', require('./controllers/users'))
