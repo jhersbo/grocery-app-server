@@ -12,7 +12,7 @@ const encryption = (password)=>{
 }
 
 
-//retrieve users 
+//retrieve all users 
 router.get('/', async (req, res)=>{
     try{
         const foundUser = await users.findAll()
