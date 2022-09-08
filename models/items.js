@@ -29,7 +29,7 @@ module.exports = (sequelize, DataTypes) => {
     },
     notes:{
       type: DataTypes.STRING
-    }
+    },
   }, {
     sequelize,
     modelName: 'items',
