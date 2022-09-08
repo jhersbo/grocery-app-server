@@ -21,6 +21,7 @@ app.use(cors({
 //controllers
 app.use('/users', require('./controllers/users'))
 app.use('/items', require('./controllers/items'))
+app.use('/lists', require('./controllers/lists'))
 
 app.get('/', async (req, res)=>{
     try{
