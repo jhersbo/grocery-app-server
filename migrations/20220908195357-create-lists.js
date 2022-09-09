@@ -10,7 +10,8 @@ module.exports = {
         primaryKey: true,
       },
       list_arr: {
-        type: Sequelize.TEXT
+        type: Sequelize.TEXT,
+        allowNull: false
       }
     });
   },
