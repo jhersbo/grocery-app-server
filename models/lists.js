@@ -23,13 +23,20 @@ module.exports = (sequelize, DataTypes) => {
       primaryKey: true,
       autoIncrement: true
     },
-    //add list name
+    list_name:{
+      type: DataTypes.STRING,
+      allowNull: false
+    },
     user_id:{
       type: DataTypes.INTEGER,
       allowNull: false,
     },
     list_arr: {
       type: DataTypes.TEXT,
+      allowNull: false
+    },
+    date_created: {
+      type: DataTypes.DATE,
       allowNull: false
     }
   }, {

@@ -7,11 +7,6 @@ const { users, items } = db
 const bcrypt = require('bcrypt')
 const saltRounds = 10
 
-const encryption = (password)=>{
-    bcrypt.hash(password, saltRounds)
-}
-
-
 //retrieve all users 
 router.get('/', async (req, res)=>{
     try{

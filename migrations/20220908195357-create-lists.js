@@ -9,8 +9,16 @@ module.exports = {
         autoIncrement: true,
         primaryKey: true,
       },
+      list_name:{
+        type: Sequelize.STRING,
+        allowNull: false
+      },
       list_arr: {
         type: Sequelize.TEXT,
+        allowNull: false
+      },
+      date_created: {
+        type: Sequelize.DATE,
         allowNull: false
       }
     });

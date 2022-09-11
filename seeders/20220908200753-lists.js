@@ -84,8 +84,12 @@ module.exports = {
     await queryInterface.bulkInsert("lists", [
       {
         list_id: 23422,
+        list_name: "My List",
+        user_id: 2,
         list_arr: JSON.stringify(seed1),
-        user_id: 2
+        date_created: "1999-01-08 04:05:06 -8:00"
+
+        
       },
     ])
   },
