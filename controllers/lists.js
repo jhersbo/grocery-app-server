@@ -25,13 +25,15 @@ router.post('/', async (req, res)=>{
 
 
 //list edits
-router.post('/update', async (req, res)=>{
+router.put('/update', async (req, res)=>{
     try{
         await lists.update(req.body.list_arr, {
             where: {
                 list_id: req.body.list_id
             }
         })
+        console.log(req.body)
+        res.status(200).json('List Updated')
     }catch(err){
         res.status(500).json("List update failed.", err)
     }
@@ -45,6 +47,7 @@ router.delete('/', async (req, res)=>{
                 list_id: req.body.list_id
             }
         })
+        res.status(200).json('List Deleted')
     }catch(err){
         res.status(500).json("List deletion failed.", err)
     }
