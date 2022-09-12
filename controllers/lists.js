@@ -25,7 +25,7 @@ router.post('/', async (req, res)=>{
 
 
 //list edits
-router.put('/', async (req, res)=>{
+router.post('/update', async (req, res)=>{
     try{
         await lists.update(req.body.list_arr, {
             where: {

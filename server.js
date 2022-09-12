@@ -1,5 +1,6 @@
 //Dependencies
 const express = require('express')
+const methodOverride = require('method-override')
 const cors = require('cors')
 const cookieSession = require('cookie-session')
 const app = express()
@@ -17,6 +18,7 @@ app.use(cors({
     origin: "http://localhost:3001",
     credentials: true,
 }))
+app.use(methodOverride('_method'))
 
 //controllers
 app.use('/users', require('./controllers/users'))
