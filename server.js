@@ -15,7 +15,7 @@ app.use(cookieSession({
     maxAge: 24 * 60 * 60 * 1000
 }))
 app.use(cors({
-    origin: "http://localhost:3001",
+    origin: "https://listr-ersbo.herokuapp.com",
     credentials: true,
 }))
 app.use(methodOverride('_method'))
