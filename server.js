@@ -11,11 +11,11 @@ app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 app.use(cookieSession({
     name: 'session',
-    keys: [ "asjhdjwbriueghfngn" ],
+    keys: [ JSON.stringify(process.env.COOKIE_KEY) ],
     maxAge: 24 * 60 * 60 * 1000
 }))
 app.use(cors({
-    origin: "https://listr-ersbo.herokuapp.com",
+    origin: "https://listr-ersbo.herokuapp.com", //change when working locally
     credentials: true,
 }))
 app.use(methodOverride('_method'))
