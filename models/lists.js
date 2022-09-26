@@ -38,6 +38,10 @@ module.exports = (sequelize, DataTypes) => {
     date_created: {
       type: DataTypes.DATE,
       allowNull: false
+    },
+    shared_with: {
+      type: DataTypes.TEXT,
+      allowNull: true
     }
   }, {
     sequelize,

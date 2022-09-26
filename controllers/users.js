@@ -49,7 +49,7 @@ router.post('/auth', async (req, res)=>{
                 if(result){
                     res.status(200).json('User authenticated.')
                 }else{
-                    res.status(401).json('Incorrect password.')
+                    res.status(401).json('Incorrect password.', err)
                 }
             })
         }
