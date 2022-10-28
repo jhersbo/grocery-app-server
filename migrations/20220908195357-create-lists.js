@@ -20,6 +20,10 @@ module.exports = {
       date_created: {
         type: Sequelize.DATE,
         allowNull: false
+      },
+      shared_with: {
+        type: Sequelize.TEXT,
+        allowNull: true
       }
     });
   },

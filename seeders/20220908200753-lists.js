@@ -87,9 +87,16 @@ module.exports = {
         list_name: "My List",
         user_id: 2,
         list_arr: JSON.stringify(seed1),
-        date_created: "1999-01-08 04:05:06 -8:00"
-
-        
+        date_created: JSON.stringify(new Date()),
+        shared_with: JSON.stringify([1])
+      },
+      {
+        list_id: 934452,
+        list_name: "My List 2",
+        user_id: 2,
+        list_arr: JSON.stringify(seed1),
+        date_created: JSON.stringify(new Date()),
+        shared_with: JSON.stringify([])
       },
     ])
   },
